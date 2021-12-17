@@ -41,4 +41,5 @@ public class RemindPasswordPage extends BaseView {
         linkLogoCustomLoginPage.click();
         return new LoginPage(driver);
     }
+
 }

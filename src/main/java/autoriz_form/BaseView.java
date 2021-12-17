@@ -5,8 +5,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseView {
-    public static WebDriver driver;
-    public static WebDriverWait webDriverWait;
+    protected static WebDriver driver;
+    protected static WebDriverWait webDriverWait;
 
     public BaseView(WebDriver driver) {
         this.driver = driver;

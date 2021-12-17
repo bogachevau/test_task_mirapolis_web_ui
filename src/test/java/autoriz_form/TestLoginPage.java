@@ -13,8 +13,8 @@ public class TestLoginPage extends BaseTest {
     @Test
     void testValidLoginAndPassword() {
         new LoginPage(driver)
-                .fillInputLogin("fominaelena")
-                .fillInputPassword("1P73BP4Z")
+                .fillInputLogin(LOGIN_VALID)
+                .fillInputPassword(PASSWORD_VALID)
                 .clickLoginButton();
 
         webDriverWait.until(ExpectedConditions.presenceOfElementLocated(
@@ -39,7 +39,7 @@ public class TestLoginPage extends BaseTest {
     @Test
     void testValidLoginInvalidPassword() {
         new LoginPage(driver)
-                .fillInputLogin("fominaelena")
+                .fillInputLogin(LOGIN_VALID)
                 .fillInputPassword("test")
                 .clickInvalidLoginButton();
 
@@ -51,7 +51,7 @@ public class TestLoginPage extends BaseTest {
     void testInvalidLoginAndValidPassword() {
         new LoginPage(driver)
                 .fillInputLogin("test")
-                .fillInputPassword("1P73BP4Z")
+                .fillInputPassword(PASSWORD_VALID)
                 .clickInvalidLoginButton();
 
         assertInvalidLogin();

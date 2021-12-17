@@ -10,9 +10,11 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest {
-    EventFiringWebDriver driver;
-    WebDriverWait webDriverWait;
+    protected EventFiringWebDriver driver;
+    protected WebDriverWait webDriverWait;
     private static final String BASE_URL = "https://lmslite47vr.demo.mirapolis.ru/mira";
+    protected static final String LOGIN_VALID = "******";
+    protected static final String PASSWORD_VALID = "******";
 
     public void assertInvalidLogin() {
         String errorMessage = driver.switchTo().alert().getText();
